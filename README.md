@@ -86,8 +86,10 @@ The last argument of `DataIO::ReadInput` and `DataIO:WriteOutput` methods is alw
 
 ## Installation
 
-UXI.Serialization libraries are available as NuGet packages in a public Azure DevOps artifacts repository.
-
+UXI.Serialization libraries are available as NuGet packages in a public Azure DevOps artifacts repository:
+```
+https://pkgs.dev.azure.com/uxifiit/UXI.Serialization/_packaging/Public/nuget/v3/index.json
+```
 
 ### Add uxifiit/UXI.Serialization package source
 
@@ -113,7 +115,7 @@ nuget source Add -Name "UXI.Serialization Public Feed" -Source "https://pkgs.dev
 
 ### Install UXI.Serialization packages
 
-Then install a package to your project using the Visual Studio "Manage NuGet Packages..." window or use Package Manage Console:
+Then install the packages to your project using the Visual Studio "Manage NuGet Packages..." window or use the Package Manage Console:
 ```
 PM> Install-Package UXI.Serialization
 ```
