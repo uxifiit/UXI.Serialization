@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UXI.Serialization.Common;
 
-namespace UXI.Serialization.Json.Converters
+namespace UXI.Serialization.Formats.Json.Converters
 {
     public abstract class GenericJsonConverter<T> : Newtonsoft.Json.JsonConverter
     {

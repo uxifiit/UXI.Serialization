@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UXI.Serialization.Csv;
-using UXI.Serialization.Json;
+using UXI.Serialization.Formats.Csv;
+using UXI.Serialization.Formats.Json;
 
 namespace UXI.Serialization
 {

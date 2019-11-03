@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UXI.Serialization.Configurations;
-using UXI.Serialization.Csv;
+using UXI.Serialization.Formats.Csv;
 
 namespace UXI.Serialization.Formats.Csv.Configurations
 {

@@ -7,10 +7,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UXI.Serialization.Csv.Converters;
+using UXI.Serialization.Formats.Csv.Converters;
 
-
-namespace UXI.Serialization.Csv
+namespace UXI.Serialization.Formats.Csv
 {
     public class CsvSerializationFactory : ISerializationFactory
     {

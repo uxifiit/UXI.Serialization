@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using CsvHelper;
 using UXI.Serialization.Common;
 
-namespace UXI.Serialization.Csv
+namespace UXI.Serialization.Formats.Csv
 {
     public class CsvDataReader : DisposableBase, IDataReader, IDisposable
     {

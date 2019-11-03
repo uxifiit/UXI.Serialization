@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using UXI.Serialization.Common;
 
-namespace UXI.Serialization.Json
+namespace UXI.Serialization.Formats.Json
 {
     public class JsonDataWriter : DisposableBase, IDataWriter, IDisposable
     {

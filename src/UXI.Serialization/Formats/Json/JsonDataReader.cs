@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UXI.Serialization.Common;
 
-namespace UXI.Serialization.Json
+namespace UXI.Serialization.Formats.Json
 {
     public class JsonDataReader : DisposableBase, IDataReader, IDisposable
     {

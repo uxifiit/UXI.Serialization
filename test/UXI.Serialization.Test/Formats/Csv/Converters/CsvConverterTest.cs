@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UXI.Serialization.Fakes;
 using UXI.Serialization.Fakes.Csv.Converters;
 
-namespace UXI.Serialization.Csv.Converters
+namespace UXI.Serialization.Formats.Csv.Converters
 {
     [TestClass]
     public class CsvConverterTest

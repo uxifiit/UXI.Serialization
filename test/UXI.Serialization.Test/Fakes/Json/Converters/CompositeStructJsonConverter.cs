@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using UXI.Serialization.Json.Converters;
-using UXI.Serialization.Json.Extensions;
+using UXI.Serialization.Formats.Json.Converters;
+using UXI.Serialization.Formats.Json.Extensions;
 
 namespace UXI.Serialization.Fakes.Json.Converters
 {

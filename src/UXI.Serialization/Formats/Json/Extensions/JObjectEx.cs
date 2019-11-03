@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace UXI.Serialization.Json.Extensions
+namespace UXI.Serialization.Formats.Json.Extensions
 {
     public static class JObjectEx
     {

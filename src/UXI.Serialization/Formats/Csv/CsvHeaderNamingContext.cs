@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UXI.Serialization.Csv
+namespace UXI.Serialization.Formats.Csv
 {
     public class CsvHeaderNamingContext
     {

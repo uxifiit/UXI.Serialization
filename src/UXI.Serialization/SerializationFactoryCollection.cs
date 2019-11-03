@@ -10,8 +10,5 @@ namespace UXI.Serialization
 {
     public class SerializationFactoryCollection : Collection<ISerializationFactory>
     {
-
-
     }
-
 }

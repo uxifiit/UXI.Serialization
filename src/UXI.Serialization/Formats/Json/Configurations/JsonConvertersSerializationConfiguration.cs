@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UXI.Serialization.Configurations;
 
-namespace UXI.Serialization.Json.Configurations
+namespace UXI.Serialization.Formats.Json.Configurations
 {
     public class JsonConvertersSerializationConfiguration : SerializationConfiguration<JsonSerializer>
     {

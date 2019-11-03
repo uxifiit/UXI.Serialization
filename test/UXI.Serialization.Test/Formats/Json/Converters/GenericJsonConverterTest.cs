@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 using UXI.Serialization.Fakes;
 using UXI.Serialization.Fakes.Json.Converters;
 
-namespace UXI.Serialization.Json.Converters
+namespace UXI.Serialization.Formats.Json.Converters
 {
     [TestClass]
     public class GenericJsonConverterTest

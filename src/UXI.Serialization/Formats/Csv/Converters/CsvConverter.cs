@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using CsvHelper;
 using UXI.Serialization.Common;
 
-namespace UXI.Serialization.Csv.Converters
+namespace UXI.Serialization.Formats.Csv.Converters
 {
     public abstract class CsvConverter
     {

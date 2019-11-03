@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using CsvHelper.Configuration;
 using UXI.Serialization.Common;
-using UXI.Serialization.Csv.Converters;
+using UXI.Serialization.Formats.Csv.Converters;
 
-namespace UXI.Serialization.Csv
+namespace UXI.Serialization.Formats.Csv
 {
     public class CsvSerializerContext
     {

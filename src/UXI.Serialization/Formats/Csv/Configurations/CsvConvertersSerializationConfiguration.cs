@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UXI.Serialization.Configurations;
-using UXI.Serialization.Csv.Converters;
+using UXI.Serialization.Formats.Csv.Converters;
 
-namespace UXI.Serialization.Csv.Configurations
+namespace UXI.Serialization.Formats.Csv.Configurations
 {
     public class CsvConvertersSerializationConfiguration : SerializationConfiguration<CsvSerializerContext>
     {

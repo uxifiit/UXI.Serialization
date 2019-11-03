@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using UXI.Serialization.Json.Converters;
+using UXI.Serialization.Formats.Json.Converters;
 
-namespace UXI.Serialization.Json
+namespace UXI.Serialization.Formats.Json
 {
     public class JsonSerializationFactory : ISerializationFactory
     {

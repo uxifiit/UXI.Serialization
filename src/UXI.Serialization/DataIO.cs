@@ -89,6 +89,12 @@ namespace UXI.Serialization
         }
 
 
+        public void WriteOutput<T>(IEnumerable<T> data, string filePath, FileFormat format, object settings)
+        {
+            WriteOutput(data?.Cast<object>(), filePath, format, typeof(T), settings);
+        }
+
+
         public void WriteOutput(IEnumerable<object> data, TextWriter writer, FileFormat format, Type dataType, object settings)
         {
             using (var dataWriter = GetOutputDataWriter(writer, format, dataType, settings))
@@ -100,6 +106,12 @@ namespace UXI.Serialization
 
                 dataWriter.Close();
             }
+        }
+
+
+        public void WriteOutput<T>(IEnumerable<T> data, TextWriter writer, FileFormat format, object settings)
+        {
+            WriteOutput(data?.Cast<object>(), writer, format, typeof(T), settings);
         }
 
 
