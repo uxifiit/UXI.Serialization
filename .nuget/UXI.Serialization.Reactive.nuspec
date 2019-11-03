@@ -11,7 +11,7 @@
     <repository type="git" url="https://github.com/uxifiit/UXI.Serialization" branch="$branch$" commit="$commit$" />
     <description>Additional support for Reactive Extensions (System.Reactive) to the UXI.Serialization library.</description>
     <releaseNotes>Added overload with TextReader and TextWriter insted of file paths, updated DataIORx methods to be extension methods.</releaseNotes>
-    <copyright>Copyright © 2018 Faculty of Informatics and Information Technologies, Slovak University of Technology in Bratislava</copyright>
+    <copyright>Copyright © 2019 Faculty of Informatics and Information Technologies, Slovak University of Technology in Bratislava</copyright>
     <tags>reactive serialization json csv</tags>
     <dependencies>
       <dependency id="UXI.Serialization" version="1.0.0" />

@@ -11,7 +11,7 @@
     <repository type="git" url="https://github.com/uxifiit/UXI.Serialization" branch="$branch$" commit="$commit$" />
     <description>Base library for data serialization in different formats wrapped to the same interface. Supports JSON and CSV formats.</description>
     <releaseNotes>Exposed Formats in DataIO class as public.</releaseNotes>
-    <copyright>Copyright © 2018 Faculty of Informatics and Information Technologies, Slovak University of Technology in Bratislava</copyright>
+    <copyright>Copyright © 2019 Faculty of Informatics and Information Technologies, Slovak University of Technology in Bratislava</copyright>
     <tags>serialization json csv</tags>
     <dependencies>
       <dependency id="CsvHelper" version="9.2.3" />
