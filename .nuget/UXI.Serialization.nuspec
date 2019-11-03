@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>UXI.Serialization</id>
+    <version>2.0.0</version>
+    <title>UXI.Serialization</title>
+    <authors>uxifiit</authors>
+    <projectUrl>https://github.com/uxifiit/UXI.Serialization</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE.txt</license>
+    <repository type="git" url="https://github.com/uxifiit/UXI.Serialization" branch="$branch$" commit="$commit$" />
+    <description>Base library for data serialization in different formats wrapped to the same interface. Supports JSON and CSV formats.</description>
+    <releaseNotes>Exposed Formats in DataIO class as public.</releaseNotes>
+    <copyright>Copyright © 2018 Faculty of Informatics and Information Technologies, Slovak University of Technology in Bratislava</copyright>
+    <tags>serialization json csv</tags>
+    <dependencies>
+      <dependency id="CsvHelper" version="9.2.3" />
+      <dependency id="Newtonsoft.Json" version="11.0.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\src\UXI.Serialization\bin\$configuration$\UXI.Serialization.dll" target="lib\net45" />
+    <file src="..\LICENSE.txt" target="" />
+  </files>
+</package>

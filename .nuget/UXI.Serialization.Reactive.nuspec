@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>UXI.Serialization.Reactive</id>
+    <version>2.0.0</version>
+    <title>UXI.Serialization.Reactive</title>
+    <authors>uxifiit</authors>
+    <projectUrl>https://github.com/uxifiit/UXI.Serialization</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE.txt</license>
+    <repository type="git" url="https://github.com/uxifiit/UXI.Serialization" branch="$branch$" commit="$commit$" />
+    <description>Additional support for Reactive Extensions (System.Reactive) to the UXI.Serialization library.</description>
+    <releaseNotes>Added overload with TextReader and TextWriter insted of file paths, updated DataIORx methods to be extension methods.</releaseNotes>
+    <copyright>Copyright © 2018 Faculty of Informatics and Information Technologies, Slovak University of Technology in Bratislava</copyright>
+    <tags>reactive serialization json csv</tags>
+    <dependencies>
+      <dependency id="UXI.Serialization" version="1.0.0" />
+      <dependency id="System.Reactive" version="3.1.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\src\UXI.Serialization.Reactive\bin\$configuration$\UXI.Serialization.Reactive.dll" target="lib\net45" />
+    <file src="..\LICENSE.txt" target="" />
+  </files>
+</package>

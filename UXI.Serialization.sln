@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UXI.Serialization", "src\UXI.Serialization\UXI.Serialization.csproj", "{98346E75-C4C0-4C4D-BF9C-59AE193721D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UXI.Serialization.Reactive", "src\UXI.Serialization.Reactive\UXI.Serialization.Reactive.csproj", "{12CF54A8-01B0-467D-BADB-38F6A542B0D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DA94FB1E-10FA-4702-8388-33C26F866A56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UXI.Serialization.Test", "test\UXI.Serialization.Test\UXI.Serialization.Test.csproj", "{7BF8214F-E10A-4935-A3B5-3BD24AF329FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0A1F18B4-D41E-4FB9-858C-1F40EAA688E8}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\UXI.Serialization.nuspec = .nuget\UXI.Serialization.nuspec
+		.nuget\UXI.Serialization.Reactive.nuspec = .nuget\UXI.Serialization.Reactive.nuspec
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6819D42C-75C4-42FD-8D18-134FB2A5AAD2}"
+	ProjectSection(SolutionItems) = preProject
+		build.bat = build.bat
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98346E75-C4C0-4C4D-BF9C-59AE193721D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98346E75-C4C0-4C4D-BF9C-59AE193721D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98346E75-C4C0-4C4D-BF9C-59AE193721D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98346E75-C4C0-4C4D-BF9C-59AE193721D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12CF54A8-01B0-467D-BADB-38F6A542B0D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12CF54A8-01B0-467D-BADB-38F6A542B0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12CF54A8-01B0-467D-BADB-38F6A542B0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12CF54A8-01B0-467D-BADB-38F6A542B0D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BF8214F-E10A-4935-A3B5-3BD24AF329FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BF8214F-E10A-4935-A3B5-3BD24AF329FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BF8214F-E10A-4935-A3B5-3BD24AF329FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BF8214F-E10A-4935-A3B5-3BD24AF329FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7BF8214F-E10A-4935-A3B5-3BD24AF329FD} = {DA94FB1E-10FA-4702-8388-33C26F866A56}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97068960-98FC-4CC1-AE6D-3364C16C9609}
+	EndGlobalSection
+EndGlobal
