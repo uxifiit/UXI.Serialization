@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2019 Faculty of Informatics and Information Technologies, Slovak University of Technology in Bratislava
+Copyright (c) 2019 Martin Konopka and Faculty of Informatics and Information Technologies, Slovak University of Technology in Bratislava
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
