@@ -107,19 +107,19 @@ output.Subscribe();
 
 ## Installation
 
-UXI.Serialization libraries are available as NuGet packages in a public Azure DevOps artifacts repository:
+UXI.Serialization libraries are available as NuGet packages in a public Azure DevOps artifacts repository shared with [UXI.Libs](https://github.com/uxifiit/UXI.Libs):
 ```
-https://pkgs.dev.azure.com/uxifiit/UXI.Serialization/_packaging/Public/nuget/v3/index.json
+https://pkgs.dev.azure.com/uxifiit/UXI.Libs/_packaging/Public/nuget/v3/index.json
 ```
 
-### Add uxifiit/UXI.Serialization package source
+### Add uxifiit/UXI.Libs package source
 
 First, add a new package source. Choose the way that fits you the best:
 
 * Add new package source in [Visual Studio settings](https://docs.microsoft.com/en-us/azure/devops/artifacts/nuget/consume?view=azure-devops).
 * Add new package source with the repository URL through command line:
 ```
-nuget source Add -Name "UXI.Serialization Public Feed" -Source "https://pkgs.dev.azure.com/uxifiit/UXI.Serialization/_packaging/Public/nuget/v3/index.json"
+nuget source Add -Name "UXI.Libs Public Feed" -Source "https://pkgs.dev.azure.com/uxifiit/UXI.Libs/_packaging/Public/nuget/v3/index.json"
 ```
 * Create `NuGet.config` file in your project's solution directory where you add this package source:
 
@@ -127,7 +127,7 @@ nuget source Add -Name "UXI.Serialization Public Feed" -Source "https://pkgs.dev
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <packageSources>
-    <add key="UXI.Serialization Public Feed" value="https://pkgs.dev.azure.com/uxifiit/UXI.Serialization/_packaging/Public/nuget/v3/index.json" />
+    <add key="UXI.Libs Public Feed" value="https://pkgs.dev.azure.com/uxifiit/UXI.Libs/_packaging/Public/nuget/v3/index.json" />
   </packageSources>
   <disabledPackageSources />
 </configuration>
