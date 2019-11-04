@@ -1,6 +1,6 @@
 # UXI.Serialization
 
-A library for serialization and deserialization of enumerable or observable data streams. Current supported formats for serialization are JSON and CSV using [Json.NET](https://github.com/JamesNK/Newtonsoft.Json) and [CsvHelper](https://github.com/JoshClose/CsvHelper) libraries.
+A wrapper library over data serialization for generic reading and writing of data in enumerable or observable streams. Current supported formats for serialization are JSON and CSV using the [Json.NET](https://github.com/JamesNK/Newtonsoft.Json) and [CsvHelper](https://github.com/JoshClose/CsvHelper) libraries.
 
 The base `UXI.Serialization` library supports writing and reading data as `IEnumerable<T>`, the extension library `UXI.Serialization.Reactive` adds support for `IObservable<T>`. 
 
@@ -8,16 +8,16 @@ The base `UXI.Serialization` library supports writing and reading data as `IEnum
 
 ## Usage
 
-The main access point to serialization or deserialization is the `DataIO` class with `ReadInput` and `WriteOutput` methods:
+The main access point to the library functionality is the `DataIO` class with `ReadInput` and `WriteOutput` methods. Example with enumerable data:
 
 ```csharp
 using UXI.Serialization;
 
-// initialize DataIO with supported serialization formats
+// initialize DataIO with supported serialization formats and converters
 DataIO io = // see below
 
 // reading data
-IEnumerable<Data> input = io.ReadInput<Data>("path/to/input.csv", FileFormat.CSV, null);
+IEnumerable<Data> input = io.ReadInput<Data>("path/to/input.csv", FileFormat.CSV);
 
 foreach (var item in input) 
 {
@@ -26,11 +26,10 @@ foreach (var item in input)
 
 
 // writing data
-IEnumerable<Data> output = // get data for output
+IEnumerable<Data> output = // generate data for output
 
-io.WriteOutput(output, "path/to/output.csv", FileFormat.CSV, null);
+io.WriteOutput(output, "path/to/output.csv", FileFormat.CSV);
 ```
-
 
 ### Define serialization formats
 
@@ -75,12 +74,34 @@ DataIO io = new DataIO(
 
 ### Dynamic configuration
 
-The last argument of `DataIO::ReadInput` and `DataIO:WriteOutput` methods is always `object settings` which is passed to configurations. This way you can dynamically alter configurations. These settings are passed to the last argument of `Configure` method defined by the `ISerializationConfiguration` interface.
+The last argument of `DataIO::ReadInput` and `DataIO:WriteOutput` methods is always `object settings` (optional) which is passed to configurations to the last argument of the `Configure` method defined by the `ISerializationConfiguration` interfafce. This way, you can dynamically alter configurations.
 
 
 ### Support for IObservable\<T\> with Reactive Extensions
 
 `UXI.Serialization.Reactive` is an extension to the main serialization library. It adds `DataIORx` class with additional methods for consuming and producing observable streams of data for serialization. 
+
+Example with observable data streams:
+
+```csharp
+using System.Reactive;
+using System.Reactive.Linq;
+using UXI.Serialization;
+using UXI.Serialization.Reactive;
+
+// initialize DataIO with supported serialization formats and converters
+DataIO io = // same as for example with enumerable data
+
+IObservable<Data> input = io.ReadInputAsObservable("path/to/input.csv", FileFormat.CSV);
+
+// apply operators from the Reactive Extensions library
+var data = input.Where(i => i.Name.StartsWith("User_"))
+                .Select(i => i.Score);
+
+IObservable<int> output = io.WriteOutput(data, "path/to/output.csv", FileFormat.CSV);
+
+output.Subscribe();
+```
 
 
 
