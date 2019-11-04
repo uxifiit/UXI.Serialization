@@ -1,4 +1,4 @@
-# UXI.Serialization
+# UXIsk Data Serialization Library
 
 A wrapper library over data serialization for generic reading and writing of data in enumerable or observable streams. Current supported formats for serialization are JSON and CSV using the [Json.NET](https://github.com/JamesNK/Newtonsoft.Json) and [CsvHelper](https://github.com/JoshClose/CsvHelper) libraries. UXI.Serialization is part of the common libraries in [UXI.Libs](https://github.com/uxifiit/UXI.Libs).
 
