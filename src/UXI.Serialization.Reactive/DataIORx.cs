@@ -11,7 +11,7 @@ namespace UXI.Serialization.Reactive
 {
     public static class DataIORx
     {
-        public static IObservable<object> ReadInputAsObservable(this DataIO io, string filePath, FileFormat fileFormat, Type dataType, object settings)
+        public static IObservable<object> ReadInputAsObservable(this DataIO io, string filePath, FileFormat fileFormat, Type dataType, object settings = null)
         {
             FileFormat format = io.EnsureCorrectFileFormat(filePath, fileFormat);
 
@@ -22,7 +22,7 @@ namespace UXI.Serialization.Reactive
         }
 
 
-        public static IObservable<object> ReadInputAsObservable(this DataIO io, TextReader reader, FileFormat format, Type dataType, object settings)
+        public static IObservable<object> ReadInputAsObservable(this DataIO io, TextReader reader, FileFormat format, Type dataType, object settings = null)
         {
             return Observable.Using(() => io.GetInputDataReader(reader, format, dataType, settings), (dataReader) =>
             {
@@ -49,7 +49,7 @@ namespace UXI.Serialization.Reactive
         }
 
 
-        public static IObservable<object> WriteOutput(this DataIO io, IObservable<object> data, string filePath, FileFormat fileFormat, Type dataType, object settings)
+        public static IObservable<object> WriteOutput(this DataIO io, IObservable<object> data, string filePath, FileFormat fileFormat, Type dataType, object settings = null)
         {
             FileFormat format = io.EnsureCorrectFileFormat(filePath, fileFormat);
 
@@ -60,7 +60,7 @@ namespace UXI.Serialization.Reactive
         }
 
 
-        public static IObservable<object> WriteOutput(this DataIO io, IObservable<object> data, TextWriter writer, FileFormat format, Type dataType, object settings)
+        public static IObservable<object> WriteOutput(this DataIO io, IObservable<object> data, TextWriter writer, FileFormat format, Type dataType, object settings = null)
         {
             return Observable.Using(() => io.GetOutputDataWriter(writer, format, dataType, settings), (IDataWriter dataWriter) =>
             {

@@ -24,7 +24,7 @@ namespace UXI.Serialization
         public IDictionary<FileFormat, ISerializationFactory> Formats { get; }
 
 
-        public IEnumerable<object> ReadInput(string filePath, FileFormat fileFormat, Type dataType, object settings)
+        public IEnumerable<object> ReadInput(string filePath, FileFormat fileFormat, Type dataType, object settings = null)
         {
             FileFormat format = EnsureCorrectFileFormat(filePath, fileFormat);
 
@@ -38,13 +38,13 @@ namespace UXI.Serialization
         }
 
 
-        public IEnumerable<T> ReadInput<T>(string filePath, FileFormat fileFormat, object settings)
+        public IEnumerable<T> ReadInput<T>(string filePath, FileFormat fileFormat, object settings = null)
         {
             return ReadInput(filePath, fileFormat, typeof(T), settings).OfType<T>();
         }
 
 
-        public IEnumerable<object> ReadInput(TextReader reader, FileFormat format, Type dataType, object settings)
+        public IEnumerable<object> ReadInput(TextReader reader, FileFormat format, Type dataType, object settings = null)
         {
             using (var dataReader = GetInputDataReader(reader, format, dataType, settings))
             {
@@ -59,13 +59,13 @@ namespace UXI.Serialization
         }
 
 
-        public IEnumerable<T> ReadInput<T>(TextReader reader, FileFormat format, Type dataType, object settings)
+        public IEnumerable<T> ReadInput<T>(TextReader reader, FileFormat format, Type dataType, object settings = null)
         {
             return ReadInput(reader, format, dataType, settings).OfType<T>();
         }
 
 
-        public IDataReader GetInputDataReader(TextReader reader, FileFormat fileType, Type dataType, object settings)
+        public IDataReader GetInputDataReader(TextReader reader, FileFormat fileType, Type dataType, object settings = null)
         {
             ISerializationFactory factory;
 
@@ -78,7 +78,7 @@ namespace UXI.Serialization
         }
 
 
-        public void WriteOutput(IEnumerable<object> data, string filePath, FileFormat fileFormat, Type dataType, object settings)
+        public void WriteOutput(IEnumerable<object> data, string filePath, FileFormat fileFormat, Type dataType, object settings = null)
         {
             FileFormat format = EnsureCorrectFileFormat(filePath, fileFormat);
 
@@ -89,13 +89,13 @@ namespace UXI.Serialization
         }
 
 
-        public void WriteOutput<T>(IEnumerable<T> data, string filePath, FileFormat format, object settings)
+        public void WriteOutput<T>(IEnumerable<T> data, string filePath, FileFormat format, object settings = null)
         {
             WriteOutput(data?.Cast<object>(), filePath, format, typeof(T), settings);
         }
 
 
-        public void WriteOutput(IEnumerable<object> data, TextWriter writer, FileFormat format, Type dataType, object settings)
+        public void WriteOutput(IEnumerable<object> data, TextWriter writer, FileFormat format, Type dataType, object settings = null)
         {
             using (var dataWriter = GetOutputDataWriter(writer, format, dataType, settings))
             {
@@ -109,13 +109,13 @@ namespace UXI.Serialization
         }
 
 
-        public void WriteOutput<T>(IEnumerable<T> data, TextWriter writer, FileFormat format, object settings)
+        public void WriteOutput<T>(IEnumerable<T> data, TextWriter writer, FileFormat format, object settings = null)
         {
             WriteOutput(data?.Cast<object>(), writer, format, typeof(T), settings);
         }
 
 
-        public IDataWriter GetOutputDataWriter(TextWriter writer, FileFormat fileType, Type dataType, object settings)
+        public IDataWriter GetOutputDataWriter(TextWriter writer, FileFormat fileType, Type dataType, object settings = null)
         {
             ISerializationFactory factory;
 
