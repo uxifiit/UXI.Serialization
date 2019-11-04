@@ -1,5 +1,7 @@
 # UXIsk Data Serialization Library
 
+[![Build Status](https://dev.azure.com/uxifiit/UXI.Libs/_apis/build/status/uxifiit.UXI.Serialization?branchName=master)](https://dev.azure.com/uxifiit/UXI.Libs/_build/latest?definitionId=4&branchName=master) [![UXI.Serialization package in Public feed in Azure Artifacts](https://feeds.dev.azure.com/uxifiit/875e4574-b18a-49ff-8cf1-55b220af2355/_apis/public/Packaging/Feeds/f25beb4b-f7d5-4466-9073-a54052469941/Packages/2c64bb35-acf0-42b1-94ee-ce7253791bb1/Badge)](https://dev.azure.com/uxifiit/UXI.Libs/_packaging?_a=package&feed=f25beb4b-f7d5-4466-9073-a54052469941&package=2c64bb35-acf0-42b1-94ee-ce7253791bb1&preferRelease=true)
+
 A wrapper library over data serialization for generic reading and writing of data in enumerable or observable streams. Current supported formats for serialization are JSON and CSV using the [Json.NET](https://github.com/JamesNK/Newtonsoft.Json) and [CsvHelper](https://github.com/JoshClose/CsvHelper) libraries. UXI.Serialization is part of the common libraries in [UXI.Libs](https://github.com/uxifiit/UXI.Libs).
 
 The base `UXI.Serialization` library supports writing and reading data as `IEnumerable<T>`, the extension library `UXI.Serialization.Reactive` adds support for `IObservable<T>`. 
