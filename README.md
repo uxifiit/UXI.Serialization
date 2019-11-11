@@ -2,7 +2,7 @@
 
 [![Build Status](https://dev.azure.com/uxifiit/UXI.Libs/_apis/build/status/uxifiit.UXI.Serialization?branchName=master)](https://dev.azure.com/uxifiit/UXI.Libs/_build/latest?definitionId=4&branchName=master) [![UXI.Serialization package in Public feed in Azure Artifacts](https://feeds.dev.azure.com/uxifiit/905a1e2c-1aff-45b3-bc72-dba43be0a133/_apis/public/Packaging/Feeds/990007cf-a847-406c-9fa5-dec22ee2ccdc/Packages/9d8d0ff5-d02d-4399-99d5-a097b2850312/Badge)](https://dev.azure.com/uxifiit/Packages/_packaging?_a=package&feed=990007cf-a847-406c-9fa5-dec22ee2ccdc&package=9d8d0ff5-d02d-4399-99d5-a097b2850312&preferRelease=true)
 
-A wrapper library over data serialization for generic reading and writing of data in enumerable or observable streams. Current supported formats for serialization are JSON and CSV using the [Json.NET](https://github.com/JamesNK/Newtonsoft.Json) and [CsvHelper](https://github.com/JoshClose/CsvHelper) libraries. UXI.Serialization is part of the common libraries in [UXI.Libs](https://github.com/uxifiit/UXI.Libs).
+A wrapper library over data serialization for generic reading and writing of data in enumerable or observable streams. Current supported formats for serialization are JSON and CSV using the [Json.NET](https://github.com/JamesNK/Newtonsoft.Json) and [CsvHelper](https://github.com/JoshClose/CsvHelper) libraries.
 
 The base `UXI.Serialization` library supports writing and reading data as `IEnumerable<T>`, the extension library `UXI.Serialization.Reactive` adds support for `IObservable<T>`. 
 
