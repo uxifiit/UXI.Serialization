@@ -109,7 +109,7 @@ output.Subscribe();
 
 ## Installation
 
-UXI.Serialization libraries are available as NuGet packages in a public Azure DevOps artifacts repository for all UXIsk packages:
+UXI.Serialization libraries are available as NuGet packages in the public Azure DevOps artifacts repository for all UXIsk packages:
 ```
 https://pkgs.dev.azure.com/uxifiit/Packages/_packaging/Public/nuget/v3/index.json
 ```
