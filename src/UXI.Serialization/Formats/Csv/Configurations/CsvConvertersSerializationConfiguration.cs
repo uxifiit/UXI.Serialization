@@ -24,7 +24,7 @@ namespace UXI.Serialization.Formats.Csv.Configurations
         public List<CsvConverter> Converters { get; }
 
 
-        protected override CsvSerializerContext Configure(CsvSerializerContext serializer, DataAccess access, object settings)
+        protected override CsvSerializerContext Configure(CsvSerializerContext serializer, DataAccess access, Type dataType, object settings)
         {
             IEnumerable<CsvConverter> converters = Converters;
             if (access == DataAccess.Read)

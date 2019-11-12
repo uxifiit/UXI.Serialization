@@ -37,7 +37,7 @@ namespace UXI.Serialization.Formats.Csv
 
         public IDataReader CreateReaderForType(TextReader reader, Type dataType, object settings)
         {
-            var serializer = CreateSerializer(DataAccess.Read, settings);
+            var serializer = CreateSerializer(DataAccess.Read, dataType, settings);
 
             return new CsvDataReader(reader, dataType, serializer);
         }
@@ -45,13 +45,13 @@ namespace UXI.Serialization.Formats.Csv
 
         public IDataWriter CreateWriterForType(TextWriter writer, Type dataType, object settings)
         {
-            var serializer = CreateSerializer(DataAccess.Write, settings);
+            var serializer = CreateSerializer(DataAccess.Write, dataType, settings);
 
             return new CsvDataWriter(writer, dataType, serializer);
         }
 
 
-        private CsvSerializerContext CreateSerializer(DataAccess access, object settings)
+        private CsvSerializerContext CreateSerializer(DataAccess access, Type dataType, object settings)
         {
             var serializer = new CsvSerializerContext();
 
@@ -59,7 +59,7 @@ namespace UXI.Serialization.Formats.Csv
 
             foreach (var configuration in Configurations.ToArray())
             {
-                serializer = (CsvSerializerContext)configuration.Configure(serializer, access, settings)
+                serializer = (CsvSerializerContext)configuration.Configure(serializer, access, dataType, settings)
                            ?? serializer;
             }
 

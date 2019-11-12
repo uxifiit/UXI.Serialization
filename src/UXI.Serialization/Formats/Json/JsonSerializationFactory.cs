@@ -37,7 +37,7 @@ namespace UXI.Serialization.Formats.Json
 
         public IDataReader CreateReaderForType(TextReader reader, Type dataType, object settings)
         {
-            var serializer = CreateSerializer(DataAccess.Read, settings);
+            var serializer = CreateSerializer(DataAccess.Read, dataType, settings);
 
             return new JsonDataReader(reader, dataType, serializer);
         }
@@ -45,13 +45,13 @@ namespace UXI.Serialization.Formats.Json
 
         public IDataWriter CreateWriterForType(TextWriter writer, Type dataType, object settings)
         {
-            var serializer = CreateSerializer(DataAccess.Write, settings);
+            var serializer = CreateSerializer(DataAccess.Write, dataType, settings);
 
             return new JsonDataWriter(writer, serializer);
         }
 
 
-        public JsonSerializer CreateSerializer(DataAccess access, object settings)
+        public JsonSerializer CreateSerializer(DataAccess access, Type dataType, object settings)
         {
             var serializer = new JsonSerializer()
             {
@@ -60,7 +60,7 @@ namespace UXI.Serialization.Formats.Json
 
             foreach (var configuration in Configurations.ToArray())
             {
-                serializer = (JsonSerializer)configuration.Configure(serializer, access, settings)
+                serializer = (JsonSerializer)configuration.Configure(serializer, access, dataType, settings)
                            ?? serializer;
             }
 

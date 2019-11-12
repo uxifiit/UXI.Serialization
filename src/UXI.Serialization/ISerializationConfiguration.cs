@@ -6,6 +6,6 @@ namespace UXI.Serialization
     {
         Type SerializerType { get; }
 
-        object Configure(object serializer, DataAccess access, object settings);
+        object Configure(object serializer, DataAccess access, Type dataType, object settings);
     }
 }
