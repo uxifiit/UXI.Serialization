@@ -10,7 +10,7 @@ namespace UXI.Serialization.Formats.Csv.Configurations
 {
     public class CsvHeaderToLowerCaseSerializationConfiguration : SerializationConfiguration<CsvSerializerContext>
     {
-        protected override CsvSerializerContext Configure(CsvSerializerContext serializer, DataAccess acess, object settings)
+        protected override CsvSerializerContext Configure(CsvSerializerContext serializer, DataAccess acess, Type dataType, object settings)
         {
             serializer.Configuration.PrepareHeaderForMatch = header => header.ToLower();
 

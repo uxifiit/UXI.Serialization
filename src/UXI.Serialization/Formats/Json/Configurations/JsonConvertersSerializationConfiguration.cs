@@ -24,7 +24,7 @@ namespace UXI.Serialization.Formats.Json.Configurations
         public List<JsonConverter> Converters { get; }
 
 
-        protected override JsonSerializer Configure(JsonSerializer serializer, DataAccess access, object settings)
+        protected override JsonSerializer Configure(JsonSerializer serializer, DataAccess access, Type dataType, object settings)
         {
             IEnumerable<JsonConverter> converters = Converters;
             if (access == DataAccess.Read)
