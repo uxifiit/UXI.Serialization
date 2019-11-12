@@ -76,7 +76,7 @@ DataIO io = new DataIO(
 
 ### Dynamic configuration
 
-The last argument of `DataIO::ReadInput` and `DataIO:WriteOutput` methods is always `object settings` (optional) which is passed to configurations to the last argument of the `Configure` method defined by the `ISerializationConfiguration` interfafce. This way, you can dynamically alter configurations.
+The last argument of `DataIO::ReadInput` and `DataIO:WriteOutput` methods is always `object settings` (optional) which is passed to configurations as the last argument of the `Configure` method defined by the `ISerializationConfiguration` interface. This way, you can dynamically alter configurations.
 
 
 ### Support for IObservable\<T\> with Reactive Extensions
