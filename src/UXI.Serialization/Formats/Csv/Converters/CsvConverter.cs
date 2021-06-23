@@ -15,6 +15,14 @@ namespace UXI.Serialization.Formats.Csv.Converters
 
         public virtual bool CanWrite => true;
 
+        public int Columns { get; protected set; }
+
+        /// <summary>
+        /// Gets or sets a boolean flag determining whether the SerializationException should be thrown, if both the data can not be read and the return value is of a non-nullable type.
+        /// If not set, converter relies on the ThrowOnFailedDeserialize property of the calling serializer. Default value is <b>null</b> and the serializer settings are used.
+        /// </summary>
+        public virtual bool? ThrowOnFailedRead { get; set; } = null;
+
         public abstract bool CanConvert(Type objectType);
 
         public virtual void ReadCsvHeader(CsvReader reader, CsvSerializerContext serializer)
@@ -39,17 +47,6 @@ namespace UXI.Serialization.Formats.Csv.Converters
             return (objectType == supportedType)
                 || (supportedType.IsValueType && objectType.IsValueType && Nullable.GetUnderlyingType(objectType) == supportedType);
         }
-
-
-        public int Columns { get; protected set; }
-
-
-        /// <summary>
-        /// Gets or sets a boolean flag determining whether the SerializationException should be thrown, if both the data can not be read and the return value is of a non-nullable type.
-        /// If not set, converter relies on the ThrowOnFailedDeserialize property of the calling serializer. Default value is <b>null</b> and the serializer settings are used.
-        /// </summary>
-        public virtual bool? ThrowOnFailedRead { get; set; } = null;
-
 
         public sealed override object ReadCsv(CsvReader reader, Type objectType, CsvSerializerContext serializer, CsvHeaderNamingContext naming)
         {
